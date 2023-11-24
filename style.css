@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #131313;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 20px;
+    border: 8px solid #131313;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.1), inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.container .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*элементы в колонку*/
+    gap: 40px;
+    /*отступ между элементами*/
+}
+
+.container .form.finish,
+.container.submitForm .form.students {
+    display: none;
+}
+
+.container.submitForm .form.finish {
+    display: flex;
+}
+
+.container .form h2 {
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    max-width: 60%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.container .form .inputBox {
+    position: relative;
+    width: 300px;
+}
+
+.container .form .inputBox input {
+    padding: 15px 20px 15px 60px;
+    border: none;
+    width: 100%;
+    background: #131313;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-weight: 300;
+    border-radius: 25px;
+    font-size: 1em;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35);
+    transition: 0.5s;
+    outline: none;
+}
+
+.container .form .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 20px 10px 60px;
+    pointer-events: none;
+    font-size: 0.9em;
+    font-weight: 300;
+    transition: 0.5s;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.container .form .inputBox input:valid~span,
+.container .form .inputBox input:focus~span {
+    color: #4AF53F;
+    border: 1px solid #4AF53F;
+    background: #131313;
+    transform: translateX(25px) translateY(-7px);
+    font-size: 0.6em;
+    padding: 0 8px;
+    border-radius: 10px;
+    letter-spacing: 0.1em;
+}
+
+.container .form .inputBox input:valid,
+.container .form .inputBox input:focus {
+    border: 1px solid #4AF53F;
+}
+
+.container .form .inputBox i {
+    position: absolute;
+    top: 5px;
+    left: 16px;
+    width: 30px;
+    padding: 17px 0;
+    color: #4AF53F;
+    border-right: 1px solid #4AF53F;
+}
+
+.container .form .inputBox input[type="submit"] {
+    background: #4AF53F;
+    color: #131313;
+    padding: 10px 0;
+    font-weight: 900;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.1), inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    border: 2px solid #4AF53F;
+    border-radius: 6px;
+}
+
+.radio-container * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.radio-container .radio-btn {
+    border-right: 2px solid #4AF53F;
+    overflow: hidden;
+}
+
+/* .radio-container .radio-btn:last-child {
+    border-right: 0px;
+}
+
+.radio-container .radio-btn.nth-2 {
+    width: calc(50%);
+}
+
+.radio-container .radio-btn.nth-3 {
+    width: calc(33.3333%);
+}
+
+.radio-container .radio-btn.nth-4 {
+    width: calc(25%);
+}
+
+.radio-container .radio-btn.nth-5 {
+    width: calc(20%);
+} */
+
+.radio-container .radio-btn label {
+    background-color: transparent;
+    color: #fff;
+    display: block;
+    padding: 8px 26px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.radio-container .radio-btn input {
+    display: none;
+}
+
+.radio-container .radio-btn input:checked+label {
+    background-color: #4AF53F;
+    color: #000;
+}
+
+.select_wrp {
+    width: 300px;
+    margin: 0 auto;
+    background: #131313;
+}
+
+.asked{
+    max-width: 60%;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1em;
+    border: 2px solid #4AF53F;
+    border-radius: 90px;
+}
+
+.asked_h3{
+    max-width: 60%;
+    padding: 30px;
+    font-size: 1.1em;
+    border: 2px solid #4AF53F;
+    border-radius: 60px;
+    color: #4AF53F;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+.container .form .inputBox.if_no{
+    display: none;
+}
+
+.container.vis_if_no .inputBox.if_no {
+    display: flex;
+}
